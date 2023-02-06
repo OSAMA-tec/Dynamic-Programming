@@ -1,1 +1,6 @@
-console.log("Hello to the future!");
+const fib = (n) => {
+    if (n <= 2) return 1;
+    console.log(n);
+    return fib(n - 1) + fib(n - 2);
+};
+console.log(fib(7));
