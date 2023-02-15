@@ -7,7 +7,7 @@ You have an unlimited supply of coins with denominations 1, 5, and 10.
 
 const checkChange=(n,values=[],memo={})=>{
     if(n in memo)return memo[n];
-    const obj=[1,5,10];
+    const obj=[11,18,5,10];
     if(n<=0)return values;
 
     for(let i=0;i<obj.length;i++){
