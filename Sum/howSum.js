@@ -5,11 +5,10 @@ const canSum = (targetSum, numbers,memo={}) => {
     for (let num of numbers) {
         const remainder = targetSum - num;
         remainderResult=canSum(remainder, numbers,memo);
-        if (remainderResult!==null) {
-            memo[targetSum]=remainderResult;
-            return [...remainderResult,num];
+        if (remainderResult!==null){
+            memo[targetSum]=[...remainderResult,num];
+            return memo[targetSum];
         }
-        
     }
     memo[targetSum]=null;
     return null;
